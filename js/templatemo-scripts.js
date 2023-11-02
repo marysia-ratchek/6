@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Single Page Nav for highlighting nav items
   $("#tmMainNav").singlePageNav();
 
@@ -6,7 +6,7 @@ $(document).ready(function() {
   $(".tm-gallery").slick({
     dots: true,
     infinite: false,
-    arrows: false,
+    arrows: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 2,
@@ -66,12 +66,12 @@ $(document).ready(function() {
     gallery: { enabled: true }
   });
 
-  $(".navbar-toggler").on("click", function(e) {
+  $(".navbar-toggler").on("click", function (e) {
     $(".tm-sidebar").toggleClass("show");
     e.stopPropagation();
   });
 
-  $("html").click(function(e) {
+  $("html").click(function (e) {
     var sidebar = document.getElementById("tmSidebar");
 
     if (!sidebar.contains(e.target)) {
@@ -79,7 +79,7 @@ $(document).ready(function() {
     }
   });
 
-  $("#tmMainNav .nav-link").click(function(e) {
+  $("#tmMainNav .nav-link").click(function (e) {
     $(".tm-sidebar").removeClass("show");
   });
 });
